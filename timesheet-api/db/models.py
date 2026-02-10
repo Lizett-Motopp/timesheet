@@ -45,3 +45,14 @@ class DbTimesheetEntry(Base):
     # Relationships
     employee = relationship("DbUser", back_populates="timesheet_entries")
     project = relationship("DbProject", back_populates="timesheet_entries")
+
+# class DbTimesheets(Base):
+#     __tablename__ = 'timesheets'
+#
+#     id = Column(Integer, primary_key=True, index=True)
+#     employee_id = Column(Integer, ForeignKey('users.id'), nullable=False)
+#     week_number = Column(Integer, nullable=False)
+#     year = Column(Integer, nullable=False)
+#     status = Column(Enum(TimesheetStatus),default=DRAFT, nullable=False)
+#
+#
